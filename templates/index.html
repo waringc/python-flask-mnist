@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python MNIST</title>
+
+    <link rel = "stylesheet" href = "{{url_for('static', filename = 'css/style.css')}}">
+    <link rel = "stylesheet" href = "{{url_for('static', filename = 'css/bootstrap.min.css')}}">
+
+
+</head>
+<body>
+
+    <div class = "jumbotron text-center">
+        <h1>py-MNIST <span class="glyphicon glyphicon-eye-open"></span> </h1>
+        <p>Digit reader</p>
+    </div>
+
+
+    <div class = "row">
+
+        <div class = "col-md-6" align = "center">
+
+            <div class = "h1">Draw digit here:</div>
+            <canvas id="drawCanvas"></canvas>
+
+            <div class = "row">
+
+                <div class = "col-md-6" align = "right">
+                    <button type="button" class="btn-lg btn-primary" id="predict">Predict</button>
+                </div>
+
+                <div class = "col-md-6" align = "left">
+                    <button type="button" class="btn-lg btn-warning" id="clear">Clear</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class = "col-md-6" align = "center">
+
+
+            <div class = "h2">Scaled Input:</div>
+            <canvas id="modelInput" style="border:1px solid" width="140" height="140"></canvas>
+
+            <div class = "h2" id = "prediction">Predicted Number: </div>
+
+            <div class = "h2" id = "prediction">Prediction Probabilities: </div>
+            <div id="graph"></div>
+
+        </div>
+
+    </div>
+
+</body>
+
+    <script src="{{url_for('static',filename='js/jquery-3.2.1.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/scripts.js')}}"></script>
+
+</html>
