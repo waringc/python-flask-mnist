@@ -19,6 +19,7 @@ app = Flask(__name__)
 #load mnist model
 global model
 model = get_model()
+model._make_predict_function()
 
 def create_graph(x_dat,y_dat):
    p = sns.barplot(x_dat, y_dat)

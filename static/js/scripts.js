@@ -68,7 +68,7 @@ class Main{
         if (this.drawing){
             var curr = this.getPosition(e.clientX,e.clientY)
 
-            this.ctx.lineWidth = 32;
+            this.ctx.lineWidth = 72;
             this.ctx.lineCap = 'round'
 
             this.ctx.beginPath()
